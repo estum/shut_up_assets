@@ -18,7 +18,7 @@ class ShutUpAssets < Rails::Railtie # :nodoc-all:
       suppressed = ShutUpAssets.suppress_on?(request)
 
       # Put some space between requests in development logs.
-      logger.debug { EMPTY_LINE } if development? && !suppressed
+      logger.debug { EMPTY_LINE } if Rails.env.development? && !suppressed
 
       instrumenter = ActiveSupport::Notifications.instrumenter
       instrumenter.start 'request.action_dispatch', request: request
