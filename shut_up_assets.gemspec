@@ -15,7 +15,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = %w(lib)
   spec.test_files    = Dir['test/**/*']
 
-  spec.required_ruby_version = ">= 2.2"
+  spec.required_ruby_version = ">= 2.1"
 
   spec.add_dependency 'railties', '>= 4.2', '< 5.0'
   spec.add_development_dependency 'rake'
